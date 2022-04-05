@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head class="page">
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+    <base href="https://htmlacademy-adaptive.github.io/1709931-cat-energy-25/3/">
+</head>
+  <body class="page__body">
+    <header class="main-header">
+
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy.">
+      </a>
+
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-page">
+
+      <section class="programms-profile">
+        <div class="programms-profile__wrapper">
+
+          <header class="programms-profile__header">
+            <h1 class="programms-profile__title">Подбор программы</h1>
+            <p class="programms-profile__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          </header>
+
+          <form class="programms-profile__form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="programms-profile__group">
+              <legend class="visually-hidden">Данные котика</legend>
+              <ul class="programms-profile__list">
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <span class="programms-profile__label">Имя:<sup>*</sup></span>
+                    <input class="programms-profile__input" type="text" name="cat-name" placeholder="Барсик" required>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <span class="programms-profile__label">Вес (кг):<sup>*</sup></span>
+                    <input class="programms-profile__input" type="number" name="cat-weight" placeholder="7" required>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <span class="programms-profile__label">Возраст (лет):</span>
+                    <input class="programms-profile__input" type="number" name="cat-age" placeholder="7">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="programms-profile__group">
+              <legend class="visually-hidden">Цель котика</legend>
+              <ul class="programms-profile__list">
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <input class="programms-profile__input" type="radio" name="weight-loss">
+                    <span class="programms-profile__label programms-profile__label--radio">Похудение</span>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <input class="programms-profile__input" type="radio" name="weight-gain">
+                    <span class="programms-profile__label programms-profile__label--radio">Набор массы</span>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <input class="programms-profile__input" type="radio" name="unknown">
+                    <span class="programms-profile__label programms-profile__label--radio">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="programms-profile__group">
+              <legend class="programms-profile__title">Контактные данные (владельца кота)</legend>
+              <ul class="programms-profile__list">
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <span class="programms-profile__label">E-mail:<sup>*</sup></span>
+                    <input class="programms-profile__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <span class="programms-profile__label">Телефон:<sup>*</sup></span>
+                    <input class="programms-profile__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <div class="programms-profile__group">
+              <p class="programms-profile__title">Комментарий</p>
+              <textarea class="programms-profile__comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+
+            <fieldset class="programms-profile__group">
+              <legend class="programms-profile__title">Дополнительно</legend>
+              <ul class="programms-profile__list">
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <input class="programms-profile__input" type="checkbox" name="sweetener">
+                    <span class="programms-profile__label programms-profile__label--checkbox">Cахарозаменитель</span>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <input class="programms-profile__input" type="checkbox" name="water">
+                    <span class="programms-profile__label programms-profile__label--checkbox">Питьевая вода</span>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <input class="programms-profile__input" type="checkbox" name="milk">
+                    <span class="programms-profile__label programms-profile__label--checkbox">Молоко</span>
+                  </label>
+                </li>
+
+                <li class="programms-profile__item">
+                  <label class="programms-profile__control">
+                    <input class="programms-profile__input" type="checkbox" name="vitamins">
+                    <span class="programms-profile__label programms-profile__label--checkbox">Витамины</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <div class="programms-profile__submit">
+              <button class="programms-profile__button button" type="submit">Отправить заявку</button>
+              <p class="programms-profile__text"><sup>*</sup> — Обязательные поля</p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
+
+        <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002699!2d30.32085871554306!3d59.93871916905485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648997380433!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <h2 class="visually-hidden">Соц.сети</h2>
+        <a class="main-footer__logo">
+          <svg class="main-footer__logo-image" width="128" height="24"></svg>
+          <span class="visually-hidden">Логотип Cat Energy.</span>
+        </a>
+
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">ВКонтакте.</span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link social__link--yt" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Youtube.</span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link social__link--tg" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Телеграмм.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__logo-icon" width="27" height="34"></svg>
+            <span class="visually-hidden">HTML Academy.</span>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+
+  </body>
+  </html>
