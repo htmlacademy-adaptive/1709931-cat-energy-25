@@ -1,0 +1,101 @@
+.programs-profile__header {
+  padding: 27px 20px 0;
+}
+
+.programs-profile__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &--comments {
+    padding: 0 20px 22px;
+  }
+}
+
+.programs-profile__info-wrapper {
+  padding: 0 20px 24px;
+  border-bottom: 1px solid @border-block-color;
+}
+
+.programs-profile__programs-wrapper {
+  padding: 22px 20px 20px;
+  border-bottom: 1px solid @border-block-color;
+}
+
+.programs-profile__contacts-wrapper {
+  padding: 26px 20px 24px;
+}
+
+.programs-profile__more-wrapper {
+  padding: 0 20px 34px;
+}
+
+.programs-profile__title {
+  margin-top: 0;
+  margin-bottom: 36px;
+  .font(24px, 26px);
+  color: @black;
+
+  &--header {
+    .font(36px, 36px);
+    font-weight: 400;
+  }
+}
+
+.programs-profile__text {
+  margin-top: 0;
+  margin-bottom: 39px;
+  text-transform: uppercase;
+  color: @black;
+}
+
+.programs-profile__list {
+  .font(16px);
+  text-transform: uppercase;
+  .reset-list();
+}
+
+.programs-profile__item:not(:last-of-type) {
+  margin-bottom: 13px;
+}
+
+.programs-profile__label {
+  margin-right: 13px;
+
+  &--programs {
+    color: @gray-2;
+  }
+
+  &--more {
+    color: @black;
+  }
+}
+
+.programs-profile__input {
+  padding: 14px 15px;
+  border: 1px solid @border-color;
+
+  &::placeholder {
+    font-family: "Oswald", "Arial", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.programs-profile__comments {
+  width: 100%;
+  padding: 10px 12px 10px 15px;
+  font-family: "Oswald", sans-serif;
+  .font(16px);
+  text-transform: uppercase;
+}
+
+.programs-profile__required-fields {
+  margin: 0;
+  padding-top: 21px;
+  padding-bottom: 32px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  .font(14px, 16px);
+  color: @black;
+  text-align: center;
+}
+

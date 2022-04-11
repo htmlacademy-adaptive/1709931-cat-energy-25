@@ -1,0 +1,43 @@
+.promo {
+  position: relative;
+  text-align: center;
+  color: @white;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 302px;
+    .bg-image ("../img/promo-bg.jpg", @green);
+    z-index: -1;
+    content: "";
+  }
+}
+
+.promo__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 10px;
+}
+
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.promo__slogan {
+  margin-top: 0;
+  margin-bottom: 29px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__image {
+  display: block;
+  margin-bottom: 3px;
+}
