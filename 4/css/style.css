@@ -12,16 +12,6 @@
   src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
   font-display: swap;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 body {
   margin: 0;
 }
@@ -35,6 +25,16 @@ img {
 }
 a {
   text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .main-header {
   padding: 0 20px;
@@ -208,8 +208,7 @@ a {
   line-height: 24px;
 }
 .example__value,
-.example__total,
-.range__button {
+.example__total {
   text-transform: uppercase;
   color: #000000;
 }
@@ -235,6 +234,8 @@ a {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
   background-color: transparent;
   border: none;
   cursor: pointer;
