@@ -1,11 +1,14 @@
 .programs__wrapper {
-  padding: 10px 20px 0;
+  padding: 10px @xs 20px;
 }
 
 .programs__item {
-  margin-bottom: 20px;
   padding: 30px 20px 18px;
   background-color: @gray-basic;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
 }
 
 .programs__list {
@@ -31,4 +34,35 @@
   .font(16px, 16px);
   text-transform: uppercase;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .programs__wrapper {
+    padding: 0 @xm 45px;
+  }
+
+  .programs__item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__wrapper {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 @xl 71px;
+  }
+
+  .programs__list {
+    display: flex;
+  }
+
+  .programs__item {
+    width: 50%;
+
+    &:not(:last-of-type) {
+      margin-right: 80px;
+      margin-bottom: 0;
+    }
+  }
 }
