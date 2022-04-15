@@ -1,9 +1,6 @@
-.example {
-  background-color: @bg-color;
-}
-
 .example__wrapper {
-  padding: 25px 20px 40px;
+  padding: 25px @xs 40px;
+  background-color: @bg-color;
 }
 
 .example__list {
@@ -47,5 +44,26 @@
 }
 
 .example__image {
-  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    padding: 43px @xm 56px;
+    background-color: @white;
+  }
+
+  .example__list-wrapper,
+  .example__list {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 @xl 75px;
+  }
 }

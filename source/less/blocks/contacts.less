@@ -1,7 +1,8 @@
 .contacts__wrapper {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 26px 20px;
+  padding: 26px @xs;
 }
 
 .contacts--secondary {
@@ -9,7 +10,7 @@
 }
 
 .contacts__title {
-  width: 139px;
+  width: 50%;
   margin: 0;
   .font(16px, 20px);
   text-transform: uppercase;
@@ -24,4 +25,21 @@
 
 .contacts__city {
   margin: 0;
+}
+
+.contacts__map {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    padding: 60px @xm 56px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    width: 565px;
+    padding: 56px 80px;
+  }
 }
