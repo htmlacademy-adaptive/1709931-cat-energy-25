@@ -10,7 +10,7 @@
 .example__title {
   margin-top: 0;
   margin-bottom: 40px;
-  .font(36px, 40px);
+  .font(1.8rem, calc(40 / 36));
   font-weight: 400;
   color: @black;
 }
@@ -18,11 +18,11 @@
 .example__text {
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 .example__value {
-  .font(24px, 24px);
+  .font(1.2rem, 1);
 }
 
 .example__value,
@@ -32,14 +32,14 @@
 }
 
 .example__description {
-  font-family: "Arial", sans-serif;
-  .font(12px, 12px);
+  font-family: "Arial", "Helvetica", sans-serif;
+  .font(0.6rem, 1);
 }
 
 .example__total {
   margin-top: 0;
   margin-bottom: 40px;
-  .font(@line-height: 20px);
+  .font(0.7rem, calc(20 / 14));
   text-align: center;
 }
 
