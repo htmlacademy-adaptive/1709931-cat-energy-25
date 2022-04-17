@@ -1,6 +1,7 @@
 .main-header__logo {
   display: block;
   padding: 10px @xs 17px;
+  border-bottom: 1px solid @border-index;
 }
 
 @media (min-width: @tablet-width) {
@@ -12,6 +13,7 @@
 
   .main-header__logo {
     padding: 0;
+    border: none;
   }
 }
 
@@ -19,8 +21,7 @@
   .main-header {
     display: flex;
     align-items: center;
-    max-width: @desktop-width;
-    margin: 0 auto;
-    padding: 69px @xl 114px;
+    .max-desktop-width ();
+    padding: 69px @xl 62px;
   }
 }
