@@ -10,15 +10,15 @@
 }
 
 .contacts__title {
-  width: 50%;
   margin: 0;
-  .font(16px, 20px);
+  .font(0.8rem, calc(20 / 16));
   text-transform: uppercase;
   color: @gray-1;
 }
 
 .contacts__address {
   font-family: "Arial", "Helvetica", sans-serif;
+  .font(0.7rem, calc(20 / 14));
   font-style: normal;
   color: @gray-4;
 }
@@ -39,7 +39,12 @@
 
 @media (min-width: @desktop-width) {
   .contacts__wrapper {
+    .max-desktop-width ();
     width: 565px;
     padding: 56px 80px;
+  }
+
+  .contacts__map-wrapper {
+    .max-desktop-width ();
   }
 }

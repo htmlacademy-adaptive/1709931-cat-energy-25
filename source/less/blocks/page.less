@@ -1,8 +1,22 @@
+.page {
+  height: 100%;
+  .font(125%, 1); // font-size: 16px(по умолч.) * 125% = 20px = 1rem, line-height: 20px = 1
+}
+
 .page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 100%;
   font-family: "Oswald", "Arial", sans-serif;
-  .font();
+  .font(0.7rem, calc(18 / 14)); // font-size: 14px, Line-height: 18px - Значение по умолчанию
   font-weight: 400;
   color: @gray-4;
   counter-reset: features;
+}
+
+@media (min-width: @tablet-width) {
+  .page__body {
+    .font(0.8rem, 1.5); // font-size: 16px, Line-height: 24px - Значение по умолчанию для планшета
+  }
 }

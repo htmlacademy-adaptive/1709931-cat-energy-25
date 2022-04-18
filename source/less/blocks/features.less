@@ -5,7 +5,7 @@
 .features__title {
   margin-top: 0;
   margin-bottom: 40px;
-  .font(36px, 40px);
+  .font(1.8rem, calc(40 / 36));
   font-weight: 400;
   color: @black;
 }
@@ -63,8 +63,7 @@
 
 @media (min-width: @desktop-width) {
   .features__wrapper {
-    max-width: @desktop-width;
-    margin: 0 auto;
+    .max-desktop-width ();
     padding: 0 @xl 26px;
     border-bottom: none;
   }

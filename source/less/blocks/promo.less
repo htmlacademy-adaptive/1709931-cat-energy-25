@@ -32,15 +32,14 @@
 .promo__title {
   margin-top: 0;
   margin-bottom: 25px;
+  .font(1.8rem, 1); //36px
   font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
 }
 
 .promo__slogan {
   margin-top: 0;
   margin-bottom: 29px;
-  line-height: 14px;
+  .font(0.7rem, 1);
   text-transform: uppercase;
 }
 
@@ -76,8 +75,7 @@
 
 @media (min-width: @desktop-width) {
   .promo__wrapper {
-    max-width: @desktop-width;
-    margin: 0 auto;
+    .max-desktop-width ();
     padding: 0 @xl 82px;
   }
 
