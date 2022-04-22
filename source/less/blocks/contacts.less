@@ -28,23 +28,39 @@
 }
 
 .contacts__map {
-  width: 100%;
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    padding: 60px @xm 56px;
+    padding: 60px calc(@xm + 40px) 56px;
+    background-color: @white;
+  }
+
+  .contacts__title {
+    .font(1rem, 1.3);
+  }
+
+  .contacts__address {
+    .font(0.8rem, 1.25);
+  }
+
+  .contacts__city {
+    margin-top: 22px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .contacts__wrapper {
+  .contacts {
+    position: relative;
     .max-desktop-width ();
-    width: 565px;
-    padding: 56px 80px;
   }
 
-  .contacts__map-wrapper {
-    .max-desktop-width ();
+  .contacts__wrapper {
+    position: absolute;
+    top: 95px;
+    left: @xl;
+    width: 565px;
+    padding: 56px 80px;
   }
 }

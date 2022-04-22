@@ -33,6 +33,11 @@
     border-bottom: 1px solid @border-index;
   }
 
+  .features__title {
+    margin-bottom: 32px;
+    .font(3rem, 1);
+  }
+
   .features__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -43,7 +48,7 @@
 
   .features__item {
     position: relative;
-    height: 280px;
+    min-height: 280px;
     margin: 0;
 
     &::after {
@@ -57,6 +62,7 @@
       color: @gray-basic;
       counter-increment: features;
       content: counter(features);
+      z-index: -1;
     }
   }
 }

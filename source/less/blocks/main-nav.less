@@ -1,5 +1,66 @@
+.main-nav__toggle {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 16px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  content: "";
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 23px;
+  right: 24px;
+  width: 18px;
+  height: 18px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 8px;
+    right: -3px;
+    width: 24px;
+    height: 1.5px;
+    background-color: @black;
+    content: "";
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__list {
   .reset-list;
+}
+
+.main-nav__item a[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__link {
@@ -13,6 +74,17 @@
   border-bottom: 1px solid @border-index;
 }
 
+@media (max-width: @mobile-width-only) {
+  // Меню закрыто
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+  // Скрываем кнопку, если не работает js
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
     margin-left: auto;
@@ -24,19 +96,35 @@
 
   .main-nav__wrapper {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
 
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .main-nav__item {
     border-top: none;
 
     &:not(:last-of-type) {
-      padding-right: 24px;
+      margin-right: 34px;
+    }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -10px;
+        height: 2px;
+        background-color: @green;
+        content: "";
+      }
     }
   }
 
@@ -45,5 +133,19 @@
     .font(0.9rem, calc(24 / 18));
     font-weight: 400;
     border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__item {
+    &::after {
+      bottom: -8px;
+      background-color: @white;
+    }
+  }
+
+  .main-nav__link {
+    .font(1rem, 1.5);
+    // color: @white;
   }
 }

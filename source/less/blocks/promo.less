@@ -26,13 +26,13 @@
 
 .promo__wrapper {
   width: 100%;
-  padding: 0 @xs 10px;
+  padding: 27px @xs 10px;
 }
 
 .promo__title {
   margin-top: 0;
   margin-bottom: 25px;
-  .font(1.8rem, 1); //36px
+  .font(1.8rem, 1);
   font-weight: 400;
 }
 
@@ -52,6 +52,15 @@
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
+
+  &:hover,
+  &:active {
+    background-color: @dark-green;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -66,10 +75,21 @@
     text-align: left;
   }
 
+  .promo__title {
+    margin-bottom: 41px;
+    .font(3rem, 1);
+  }
+
+  .promo__slogan {
+    .font(1rem, 1);
+    margin-bottom: 49px;
+  }
+
   .promo__button {
     width: 244px;
     margin-left: 87px;
     padding: 14px 26px;
+    .font(1rem, 1);
   }
 }
 

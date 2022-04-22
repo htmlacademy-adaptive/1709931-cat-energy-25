@@ -1,8 +1,11 @@
 .range {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .range__button {
+  padding: 0;
   font-family: "Oswald", "Arial", sans-serif;
   .font(0.8rem, 1.25);
   text-transform: uppercase;
@@ -10,4 +13,77 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.range__scale {
+  position: relative;
+  width: 26%;
+  height: 14px;
+  margin: 0 13px;
+  background-color: @white;
+  border: 1px solid @border-block-catalog2-color;
+  border-radius: 6px;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 6px;
+  padding: 0;
+  background-color: @green;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .range__button {
+    .font(1rem, 1.5);
+    border-bottom: 1px dotted fade(@black, 24%);
+
+    &:hover {
+      border-bottom: 1px solid fade(@black, 40%);
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+
+  .range__scale {
+    width: 60%;
+    height: 6px;
+    background-color: @range-color;
+    border: none;
+  }
+
+  .range__toggle {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    width: 34px;
+    height: 34px;
+    background-color: @white;
+    border-radius: 50%;
+    border: 1px solid @border-block-catalog2-color;
+
+    &:active {
+      border: 1px solid @green;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background-color: @green;
+      border-radius: 50%;
+      content: "";
+    }
+  }
 }
