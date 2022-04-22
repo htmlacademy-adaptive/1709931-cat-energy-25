@@ -34,6 +34,10 @@
   .font(0.8rem, 1);
   text-transform: uppercase;
   color: @black;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -41,8 +45,28 @@
     padding: 0 @xm 45px;
   }
 
-  .programs__item:not(:last-of-type) {
-    margin-bottom: 30px;
+  .programs__item {
+    padding: 77px 28px 53px 57px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .programs__title {
+    margin-bottom: 24px;
+    .font(1.8rem, 1);
+    text-align: left;
+  }
+
+  .programs__text {
+    margin-bottom: 48px;
+    .font(0.8rem, 1.5);
+    color: @black;
+  }
+
+  .programs__link {
+    .font(1rem, 1.5);
   }
 }
 
