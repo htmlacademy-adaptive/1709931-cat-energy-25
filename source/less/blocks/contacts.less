@@ -3,10 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 26px @xs;
-}
 
-.contacts--secondary {
-  background-color: @gray-basic;
+  &--secondary {
+    background-color: @gray-basic;
+  }
 }
 
 .contacts__title {
@@ -35,6 +35,14 @@
   .contacts__wrapper {
     padding: 60px calc(@xm + 40px) 56px;
     background-color: @white;
+
+    &--secondary {
+      background-color: @gray-basic;
+    }
+  }
+
+  .contacts__map {
+    height: 400px;
   }
 
   .contacts__title {
@@ -43,6 +51,7 @@
 
   .contacts__address {
     .font(0.8rem, 1.25);
+    text-align: right;
   }
 
   .contacts__city {
@@ -62,5 +71,13 @@
     left: @xl;
     width: 565px;
     padding: 56px 80px;
+
+    &--secondary {
+      background-color: @white;
+    }
+  }
+
+  .contacts__address {
+    text-align: left;
   }
 }
