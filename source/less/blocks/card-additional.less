@@ -7,6 +7,60 @@
 }
 
 .card-additional__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 0 15px;
   font-family: "Arial", "Helvetica", sans-serif;
   .font(0.7rem, 1);
+}
+
+.card-additional__button {
+  padding: 10px;
+  .font(0.8rem, 1.25);
+}
+
+@media (min-width: @tablet-width) {
+  .card-additional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+  }
+
+  .card-additional__title {
+    .font(1rem, 1);
+  }
+
+  .card-additional__list {
+    justify-content: flex-end;
+    margin: 0;
+    .font(0.8rem, 1.25);
+  }
+
+  .card-additional__button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card-additional {
+    grid-template-columns: 1fr 1fr 27%;
+    column-gap: 38px;
+    align-items: center;
+    padding: 15px 0 16px;
+  }
+
+  .card-additional__list {
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .card-additional__description {
+    width: 45px;
+  }
+
+  .card-additional__button {
+    grid-column: 3 / 4;
+    width: 244px;
+    justify-self: end;
+  }
 }
