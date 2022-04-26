@@ -1,12 +1,22 @@
 .gift {
+  display: flex;
+  flex-direction: column;
   width: 280px;
   height: 290px;
   .bg-image ("../img/catalog-bg.jpg",  @green);
 }
 
 .gift__text {
-  margin: 0;
+  width: 161px;
+  margin: 0 auto;
   font-family: "Arial", "Helvetica", sans-serif;
   .font(0.8rem, 1.25);
+  text-align: center;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .gift__text {
+    text-align: left;
+  }
 }

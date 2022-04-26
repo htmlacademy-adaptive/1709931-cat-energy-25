@@ -10,12 +10,19 @@
   cursor: pointer;
 
   &--secondary {
-    .font(0.8rem, 1.25);
-  }
-
-  &--tertiary {
+    padding: 10px;
     .font(0.8rem, 1.25);
     color: @gray-4;
     background-color: @gray-basic;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    .font (1rem, 1);
+
+    &--secondary {
+      .font(0.8rem, 1.25);
+    }
   }
 }
