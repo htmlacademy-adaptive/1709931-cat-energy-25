@@ -44,10 +44,16 @@
 @media (min-width: @tablet-width) {
   .card {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto repeat(3, min-content);
     box-sizing: border-box;
-    min-height: 429px;
-    background-color: @gray-basic;
+    background: linear-gradient(to bottom, @white 81px, @gray-basic 81px);
+  }
+
+  .card__link-image {
+    display: flex;
+    align-items: flex-end;
+    height: 214px;
+    margin-bottom: 30px;
   }
 
   .card__link-title {
@@ -56,7 +62,7 @@
 
   .card__title {
     width: 140px;
-    margin-bottom: 21px;
+    margin-bottom: 14px;
     .font(1rem, 1.2);
     text-align: center;
   }
@@ -67,7 +73,7 @@
   }
 
   .card__features-item {
-    padding: 7px 0 9px;
+    padding: 6px 0 9px;
     border-bottom: 1px solid @border-block-catalog2-color;
   }
 }
