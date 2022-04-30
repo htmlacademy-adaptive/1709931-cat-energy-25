@@ -17,7 +17,7 @@
 
 .range__scale {
   position: relative;
-  width: 26%;
+  width: 31%;
   height: 14px;
   margin: 0 13px;
   background-color: @white;
@@ -40,6 +40,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .range {
+    padding: 31px 0 0 4px;
+  }
+
   .range__button {
     .font(1rem, 1.5);
     border-bottom: 1px dotted fade(@black, 24%);
@@ -56,6 +60,7 @@
   .range__scale {
     width: 60%;
     height: 6px;
+    margin: 0 26px;
     background-color: @range-color;
     border: none;
   }
@@ -85,5 +90,11 @@
       border-radius: 50%;
       content: "";
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range__scale {
+    width: 72.5%;
   }
 }

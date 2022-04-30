@@ -1,9 +1,17 @@
 .gift {
   display: flex;
   flex-direction: column;
-  width: 280px;
-  height: 290px;
-  .bg-image ("../img/catalog-bg.jpg",  @green);
+  width: 100%;
+  min-height: 290px;
+  background-image: url("../img/catalog-gift-mobile.jpg");
+  background-color: @green-bg;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog-gift-mobile@2x.jpg");
+  }
 }
 
 .gift__text {
@@ -16,7 +24,30 @@
 }
 
 @media (min-width: @tablet-width) {
+  .gift {
+    min-height: 200px;
+    background-image: url("../img/catalog-gift-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-gift-tablet@2x.jpg");
+    }
+  }
+
   .gift__text {
     text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift {
+    background-image: url("../img/catalog-gift-desktop.jpg");
+
+    @media (min-resolution: 768px) {
+      background-image: url("../img/catalog-gift-desktop@2x.jpg");
+    }
+  }
+
+  .gift__text {
+    text-align: center;
   }
 }
