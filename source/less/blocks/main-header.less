@@ -5,20 +5,43 @@
 
 .main-header__logo {
   display: block;
-  width: 191px;
-  height: 38px;
+}
+
+.main-header__cat-logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-header {
     display: flex;
     align-items: center;
-    padding: 24px @xm 62px;
+    padding: 24px @xm 63px;
   }
 
   .main-header__logo-wrapper {
     padding: 0;
     border: none;
+  }
+
+  .main-header__cat-logo {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
   }
 }
 
@@ -30,5 +53,15 @@
     width: 100%;
     .max-desktop-width ();
     padding: 53px @xl 32px;
+  }
+
+  .main-header__cat-logo {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 }

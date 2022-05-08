@@ -1,3 +1,38 @@
+.social {
+  padding: 20px 0 21px;
+  text-align: center;
+  border-top: 1px solid @border-block-color;
+  border-bottom: 1px solid @border-block-color;
+}
+
 .social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .reset-list;
+}
+
+.social__item:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+.social__logo-icon {
+  fill: #666666;
+
+  &:hover,
+  &:active {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    padding-left: 17px;
+    border-top: none;
+    border-bottom: none;
+  }
 }
