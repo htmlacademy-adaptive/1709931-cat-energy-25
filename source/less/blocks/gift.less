@@ -1,6 +1,7 @@
 .gift {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 290px;
   background-image: url("../img/catalog-gift-mobile.jpg");
@@ -23,8 +24,16 @@
   color: @white;
 }
 
+.gift__icon {
+  width: 78px;
+  height: 80px;
+  margin: 59px 0 48px;
+}
+
 @media (min-width: @tablet-width) {
   .gift {
+    flex-direction: row;
+    justify-content: space-between;
     min-height: 200px;
     background-image: url("../img/catalog-gift-tablet.jpg");
 
@@ -34,12 +43,20 @@
   }
 
   .gift__text {
+    margin: 0;
+    margin-right: 124px;
     text-align: left;
+  }
+
+  .gift__icon {
+    margin-top: 42px;
+    margin-left: 80px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .gift {
+    flex-direction: column;
     background-image: url("../img/catalog-gift-desktop.jpg");
 
     @media (min-resolution: 768px) {
@@ -48,6 +65,12 @@
   }
 
   .gift__text {
+    margin: 0;
+    margin-bottom: 42px;
     text-align: center;
+  }
+
+  .gift__icon {
+    margin: 55px 0 50px;
   }
 }
