@@ -27,7 +27,7 @@
 }
 
 .programs-profile__more-wrapper {
-  padding: 0 @xs 34px;
+  padding: 0 @xs 39px;
 }
 
 .programs-profile__title-header {
@@ -79,7 +79,7 @@
 }
 
 .programs-profile__item {
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -98,8 +98,8 @@
 }
 
 .programs-profile__control-mark {
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   margin-right: 15px;
   background-color: @white;
   border: 1px solid @border-block-catalog2-color;
@@ -112,8 +112,9 @@
 .programs-profile__input[type="radio"]:checked + .programs-profile__control-mark {
   &::after {
     position: absolute;
-    top: calc((30px - 13px) / 2);
+    top: 50%;
     left: calc((30px - 13px) / 2);
+    transform: translate(0, -50%);
     width: 13px;
     height: 13px;
     background-color: @green;
@@ -125,26 +126,39 @@
 .programs-profile__input[type="checkbox"]:checked + .programs-profile__control-mark {
   &::after {
     position: absolute;
-    top: 6px;
+    top: 50%;
     left: 5px;
-    margin-top: 3px;
-    width: 24px;
-    height: 18px;
-    background-image: url("../img/tick.svg");
+    transform: translate(0, -50%);
+    width: 18px;
+    height: 14px;
+    background-image: url("../img/icon-tick-tablet.svg");
     background-repeat: no-repeat;
+    background-size: 100%;
     content: "";
   }
 }
 
 .programs-profile__input {
   padding: 14px 15px;
+  min-width: 219px;
   border: 1px solid @border-color;
+  .font(0.8rem, calc(18 / 16));
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position: center right 16px;
 
   &--info,
   &--contacts {
     flex-grow: 1;
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  &--tel {
+    background-image: url("../img/icon-tel.svg");
   }
 
   &::placeholder {
@@ -219,6 +233,8 @@
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
+  padding: 10px;
+  .font(0.8rem, 1.25);
 }
 
 .programs-profile__required-fields {
@@ -250,7 +266,7 @@
     .font(1.8rem, 1);
 
     &--more {
-      margin-bottom: 51px;
+      margin-bottom: 55px;
     }
 
     &::after {
@@ -265,6 +281,10 @@
     margin-left: -40px;
   }
 
+  .programs-profile__label {
+    margin-right: 20px;
+  }
+
   .programs-profile__text {
     .font(1rem, 1.5);
   }
@@ -275,7 +295,7 @@
   }
 
   .programs-profile__programs-wrapper {
-    margin: 0 41px 75px;
+    margin: 0 41px 73px;
     padding: 25px 28px;
     border: 1px solid @border-color;
   }
@@ -285,7 +305,7 @@
   }
 
   .programs-profile__group--comments {
-    padding: 0 40px 71px;
+    padding: 0 40px 64px;
   }
 
   .programs-profile__more-wrapper {
@@ -319,25 +339,47 @@
   }
 
   .programs-profile__input {
-    padding: 10px 19px;
+    padding: 10px 21px;
+    min-width: 260px;
     .font(1rem, 1.5);
+    background-position: center right 12px;
+
+    &--tel {
+      padding-left: 15px;
+    }
   }
 
   .programs-profile__control-mark {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     margin-right: 20px;
   }
 
   .programs-profile__input[type="radio"]:checked + .programs-profile__control-mark {
     &::after {
       position: absolute;
-      top: calc((40px - 18px) / 2);
+      top: 50%;
       left: calc((40px - 18px) / 2);
+      transform: translate(0, -50%);
       width: 18px;
       height: 18px;
       background-color: @green;
       border-radius: 50%;
+      content: "";
+    }
+  }
+
+  .programs-profile__input[type="checkbox"]:checked + .programs-profile__control-mark {
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      transform: translate(0, -50%);
+      width: 24px;
+      height: 18px;
+      background-image: url("../img/icon-tick-tablet.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
       content: "";
     }
   }
@@ -365,7 +407,8 @@
   .programs-profile__button {
     width: 282px;
     margin: 0;
-    padding: 13px;
+    padding: 15px;
+    .font(1rem, 1);
   }
 }
 

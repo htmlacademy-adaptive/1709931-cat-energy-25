@@ -1,7 +1,6 @@
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 39px @xs 22px;
   background-color: @gray-basic;
 }
@@ -9,6 +8,7 @@
 .main-footer__logo {
   display: block;
   padding-bottom: 32px;
+  text-align: center;
 }
 
 .main-footer__logo-image {
@@ -25,7 +25,8 @@
   .main-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    padding: 58px @xm 55px;
+    align-items: center;
+    padding: 47px @xm 55px;
   }
 
   .main-footer__logo {
@@ -36,6 +37,6 @@
 @media (min-width: @desktop-width) {
   .main-footer__wrapper {
     .max-desktop-width ();
-    padding: 58px @xl;
+    padding: 46px @xl;
   }
 }
